@@ -3,8 +3,17 @@
     --primary-color: #4a90e2;
     --secondary-color: #f5a623;
     --background-color: #f0f0f0;
-    --text-color: #333;
-    --white: #fff;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --background-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #f0f0f0;
+    --shadow: rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -17,14 +26,34 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
+    position: relative;
     text-align: center;
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--container-bg);
+    padding: 3rem 2rem 2rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(128, 128, 128, 0.2);
 }
 
 #generate-btn {
@@ -33,13 +62,17 @@ body {
     border: none;
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.1s;
 }
 
 #generate-btn:hover {
     background-color: #357ABD;
+}
+
+#generate-btn:active {
+    transform: scale(0.98);
 }
 
 #numbers-container {
@@ -47,17 +80,9 @@ body {
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 lotto-ball {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 5px;
 }
