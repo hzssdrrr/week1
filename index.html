@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button id="voc-open-btn">의견보내기</button>
     <div class="container">
         <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
         <h1>Lotto Number Generator</h1>
@@ -17,9 +18,12 @@
             <button id="clear-btn" class="secondary-btn">Clear</button>
         </div>
         <div id="numbers-container"></div>
-        
-        <div class="voc-section">
-            <hr>
+    </div>
+
+    <!-- VOC Modal -->
+    <div id="voc-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
             <h3>Improvement Feedback (VOC)</h3>
             <form action="https://formspree.io/f/mlgzglkg" method="POST" id="voc-form">
                 <input type="email" name="email" placeholder="Your email (optional)" class="voc-input">
@@ -28,6 +32,7 @@
             </form>
         </div>
     </div>
+
     <script src="main.js"></script>
 </body>
 </html>

@@ -117,3 +117,22 @@ document.getElementById('copy-btn').addEventListener('click', () => {
 document.getElementById('clear-btn').addEventListener('click', () => {
     document.getElementById('numbers-container').innerHTML = '';
 });
+
+// VOC Modal Logic
+const modal = document.getElementById('voc-modal');
+const openBtn = document.getElementById('voc-open-btn');
+const closeBtn = document.querySelector('.close-btn');
+
+openBtn.onclick = () => {
+    modal.style.display = 'block';
+};
+
+closeBtn.onclick = () => {
+    modal.style.display = 'none';
+};
+
+window.onclick = (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};
