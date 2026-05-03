@@ -80,14 +80,40 @@ themeToggle.addEventListener('click', () => {
 document.getElementById('generate-btn').addEventListener('click', () => {
     const numbersContainer = document.getElementById('numbers-container');
     numbersContainer.innerHTML = '';
-    const numbers = new Set();
-    while(numbers.size < 5) {
-        numbers.add(Math.floor(Math.random() * 45) + 1);
+    const numbersSet = new Set();
+    while(numbersSet.size < 6) { // Changed to 6 numbers for standard lotto
+        numbersSet.add(Math.floor(Math.random() * 45) + 1);
     }
+
+    const numbers = Array.from(numbersSet).sort((a, b) => a - b); // Sort numbers
 
     for (const number of numbers) {
         const lottoBall = document.createElement('lotto-ball');
         lottoBall.setAttribute('number', number);
         numbersContainer.appendChild(lottoBall);
     }
+});
+
+// Copy functionality
+document.getElementById('copy-btn').addEventListener('click', () => {
+    const numbers = Array.from(document.querySelectorAll('lotto-ball'))
+        .map(ball => ball.getAttribute('number'));
+    
+    if (numbers.length === 0) {
+        alert('Please generate numbers first!');
+        return;
+    }
+
+    const text = numbers.join(', ');
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = originalText, 2000);
+    });
+});
+
+// Clear functionality
+document.getElementById('clear-btn').addEventListener('click', () => {
+    document.getElementById('numbers-container').innerHTML = '';
 });
