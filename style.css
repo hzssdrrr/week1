@@ -21,7 +21,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,18 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.main-wrapper {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .container {
+    flex: 1;
+    max-width: 500px;
     position: relative;
     text-align: center;
     background-color: var(--container-bg);
@@ -37,6 +48,28 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 15px var(--shadow);
     transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.comments-section {
+    flex: 1;
+    max-width: 600px;
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    min-height: 400px;
+}
+
+@media (max-width: 1000px) {
+    .main-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container, .comments-section {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 #theme-toggle {
