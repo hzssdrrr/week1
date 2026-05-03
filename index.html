@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Lotto Number Generator - Professional Random Picker</title>
-    <meta name="description" content="Generate your lucky lotto numbers with our professional random picker. Features include dark mode, number sorting, and statistical insights for better luck.">
-    <meta name="keywords" content="lotto generator, random number picker, lucky numbers, lottery tool, free lotto picker">
+    <title>로또 번호 생성기 프로 - 전문적인 무작위 추출 도구</title>
+    <meta name="description" content="전문적인 무작위 추출 도구를 사용하여 행운의 로또 번호를 생성하세요. 다크 모드, 번호 정렬, 통계적 통찰력 등 최고의 기능을 제공합니다.">
+    <meta name="keywords" content="로또 생성기, 번호 추출기, 행운의 번호, 로또 도구, 무료 로또 번호">
     <meta name="google-adsense-account" content="ca-pub-1113198505681648">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1113198505681648"
@@ -15,11 +14,11 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="nav-logo">LottoGen Pro</div>
+            <div class="nav-logo">로또 생성기 프로</div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#guide">Guide</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="#guide">가이드</a></li>
+                <li><a href="about.html">소개</a></li>
             </ul>
             <button id="voc-open-btn">의견보내기</button>
         </nav>
@@ -27,7 +26,7 @@
 
     <main class="main-wrapper">
         <div class="left-column">
-            <!-- Top Ad Slot -->
+            <!-- 상단 광고 영역 -->
             <div class="ad-slot">
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -39,20 +38,21 @@
             </div>
 
             <section class="container">
-                <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
-                <h1>Professional Lotto Number Generator</h1>
-                <p class="subtitle">Secure, fast, and completely random number generation.</p>
+                <button id="theme-toggle" title="다크/라이트 모드 전환">🌙</button>
+                <h1>전문적인 로또 번호 생성기</h1>
+                <p class="subtitle">안전하고 빠르며, 완벽한 무작위 번호 생성을 보장합니다.</p>
                 
                 <div class="generator-controls">
-                    <button id="generate-btn">Generate Lucky Numbers</button>
+                    <button id="generate-btn">행운의 번호 생성하기</button>
                     <div class="action-buttons">
-                        <button id="copy-btn" class="secondary-btn">Copy to Clipboard</button>
-                        <button id="clear-btn" class="secondary-btn">Clear All</button>
+                        <button id="copy-btn" class="secondary-btn">클립보드에 복사</button>
+                        <button id="clear-btn" class="secondary-btn">모두 지우기</button>
                     </div>
                 </div>
                 
                 <div id="numbers-container"></div>
                 
+                <!-- 내부 광고 영역 -->
                 <div class="ad-slot-inner">
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -65,34 +65,35 @@
             </section>
 
             <article id="guide" class="info-content">
-                <h2>Comprehensive Guide to Our Lotto Generator</h2>
-                <p>Our tool uses a cryptographically secure pseudo-random number generator (CSPRNG) to ensure that every number generated has an equal chance of appearing. Whether you're playing for fun or looking for inspiration, our clean and simple interface makes it easy.</p>
+                <h2>로또 생성기 종합 가이드</h2>
+                <p>본 도구는 암호학적으로 안전한 의사 난수 생성기(CSPRNG)를 사용하여 모든 번호가 동일한 확률로 추출되도록 설계되었습니다. 재미로 즐기시거나 새로운 번호의 영감을 얻고 싶을 때, 저희의 깔끔한 인터페이스를 경험해 보세요.</p>
                 
-                <h3>Advanced Lotto Number Analysis Tips</h3>
-                <p>While lotto is a game of pure chance, many enthusiasts enjoy using various strategies to pick their numbers. Here are some common methods used by players worldwide:</p>
+                <h3>고급 로또 번호 분석 팁</h3>
+                <p>로또는 순수한 확률의 게임이지만, 많은 분들이 자신만의 전략으로 번호를 선택하곤 합니다. 전 세계적으로 인기 있는 몇 가지 분석 방법을 소개합니다:</p>
                 <ul>
-                    <li><strong>Hot and Cold Numbers:</strong> Some players track numbers that have appeared frequently (hot) or rarely (cold) in recent draws.</li>
-                    <li><strong>Balanced Selection:</strong> A common strategy is to pick a mix of odd and even numbers, as well as a balance between high and low numbers.</li>
-                    <li><strong>Pattern Avoidance:</strong> Many experts suggest avoiding simple arithmetic sequences (like 1, 2, 3, 4, 5, 6) as they are statistically very rare.</li>
+                    <li><strong>핫 넘버와 콜드 넘버:</strong> 최근 추첨에서 자주 등장한 번호(핫)와 거의 등장하지 않은 번호(콜드)를 추적하여 조합하는 방식입니다.</li>
+                    <li><strong>균형 잡힌 선택:</strong> 홀수와 짝수의 비율, 그리고 높은 숫자와 낮은 숫자의 균형을 맞춰 조합하는 보편적인 전략입니다.</li>
+                    <li><strong>패턴 회피:</strong> 1, 2, 3, 4, 5, 6과 같은 단순한 연속 번호는 통계적으로 매우 희귀하므로 피하는 것이 좋습니다.</li>
                 </ul>
 
-                <h3>Frequently Asked Questions (FAQ)</h3>
+                <h3>자주 묻는 질문 (FAQ)</h3>
                 <div class="faq-item">
-                    <h4>Is this lotto generator truly random?</h4>
-                    <p>Yes, we use the <code>Math.random()</code> function combined with unique session seeds to provide a high degree of entropy for our random number generation.</p>
+                    <h4>이 생성기는 정말 무작위인가요?</h4>
+                    <p>네, <code>Math.random()</code> 함수와 고유한 세션 시드를 결합하여 높은 수준의 엔트로피를 가진 무작위 번호를 생성합니다.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>How many numbers does it generate?</h4>
-                    <p>It generates 6 unique numbers between 1 and 45, following the standard format for many international lotteries.</p>
+                    <h4>한 번에 몇 개의 번호를 생성하나요?</h4>
+                    <p>많은 국제 로또의 표준 형식에 맞춰 1부터 45 사이의 고유한 번호 6개를 생성합니다.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Can I save my generated numbers?</h4>
-                    <p>Currently, you can use the "Copy to Clipboard" feature to save your numbers to any note-taking app or document.</p>
+                    <h4>생성된 번호를 저장할 수 있나요?</h4>
+                    <p>현재는 "클립보드에 복사" 기능을 사용하여 메모장이나 다른 문서에 번호를 간편하게 저장할 수 있습니다.</p>
                 </div>
             </article>
         </div>
 
         <aside class="comments-section">
+            <!-- 댓글 광고 영역 -->
             <div class="ad-slot">
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -116,24 +117,24 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 LottoGen Pro. All rights reserved.</p>
+            <p>&copy; 2026 로또 생성기 프로. All rights reserved.</p>
             <ul class="footer-links">
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Service</a></li>
-                <li><a href="about.html">Contact Us</a></li>
+                <li><a href="privacy.html">개인정보처리방침</a></li>
+                <li><a href="terms.html">이용약관</a></li>
+                <li><a href="about.html">문의하기</a></li>
             </ul>
         </div>
     </footer>
 
-    <!-- VOC Modal -->
+    <!-- VOC 모달 -->
     <div id="voc-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h3>Improvement Feedback (VOC)</h3>
+            <h3>개선 사항 보내기 (VOC)</h3>
             <form action="https://formspree.io/f/mlgzglkg" method="POST" id="voc-form">
-                <input type="email" name="email" placeholder="Your email (optional)" class="voc-input">
-                <textarea name="message" placeholder="How can we improve?" required class="voc-textarea"></textarea>
-                <button type="submit" class="secondary-btn">Send Feedback</button>
+                <input type="email" name="email" placeholder="이메일 주소 (선택 사항)" class="voc-input">
+                <textarea name="message" placeholder="어떻게 개선하면 좋을까요?" required class="voc-textarea"></textarea>
+                <button type="submit" class="secondary-btn">의견 보내기</button>
             </form>
         </div>
     </div>
