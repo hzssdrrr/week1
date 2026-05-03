@@ -109,3 +109,47 @@ body {
 lotto-ball {
     margin: 5px;
 }
+
+.voc-section {
+    margin-top: 2.5rem;
+    text-align: left;
+}
+
+.voc-section hr {
+    border: 0;
+    border-top: 1px solid var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.voc-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+#voc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.voc-input, .voc-textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--shadow);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.voc-input:focus, .voc-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.voc-textarea {
+    min-height: 80px;
+    resize: vertical;
+}
