@@ -4,16 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Ultimate Lotto Number Generator - Professional Random Picker</title>
+    <meta name="description" content="Generate your lucky lotto numbers with our professional random picker. Features include dark mode, number sorting, and statistical insights for better luck.">
+    <meta name="keywords" content="lotto generator, random number picker, lucky numbers, lottery tool, free lotto picker">
     <meta name="google-adsense-account" content="ca-pub-1113198505681648">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1113198505681648"
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <button id="voc-open-btn">의견보내기</button>
-    
-    <div class="main-wrapper">
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">LottoGen Pro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#guide">Guide</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="voc-open-btn">의견보내기</button>
+        </nav>
+    </header>
+
+    <main class="main-wrapper">
         <div class="left-column">
             <!-- Top Ad Slot -->
             <div class="ad-slot">
@@ -26,17 +38,21 @@
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
 
-            <div class="container">
+            <section class="container">
                 <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
-                <h1>Lotto Number Generator</h1>
-                <button id="generate-btn">Generate Numbers</button>
-                <div class="action-buttons">
-                    <button id="copy-btn" class="secondary-btn">Copy Numbers</button>
-                    <button id="clear-btn" class="secondary-btn">Clear</button>
+                <h1>Professional Lotto Number Generator</h1>
+                <p class="subtitle">Secure, fast, and completely random number generation.</p>
+                
+                <div class="generator-controls">
+                    <button id="generate-btn">Generate Lucky Numbers</button>
+                    <div class="action-buttons">
+                        <button id="copy-btn" class="secondary-btn">Copy to Clipboard</button>
+                        <button id="clear-btn" class="secondary-btn">Clear All</button>
+                    </div>
                 </div>
+                
                 <div id="numbers-container"></div>
                 
-                <!-- Inner Ad Slot -->
                 <div class="ad-slot-inner">
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -46,11 +62,21 @@
                          data-full-width-responsive="true"></ins>
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                 </div>
-            </div>
+            </section>
+
+            <article id="guide" class="info-content">
+                <h2>How to Use Our Lotto Generator</h2>
+                <p>Our tool uses a cryptographically secure pseudo-random number generator (CSPRNG) to ensure that every number generated has an equal chance of appearing. Whether you're playing for fun or looking for inspiration, our clean and simple interface makes it easy.</p>
+                <h3>Why Choose Our Tool?</h3>
+                <ul>
+                    <li><strong>True Randomness:</strong> No biased algorithms, just pure math.</li>
+                    <li><strong>User-Friendly:</strong> One-click generation and easy copy-paste.</li>
+                    <li><strong>Dark Mode Support:</strong> Comfortable on the eyes at any time of day.</li>
+                </ul>
+            </article>
         </div>
 
-        <div class="comments-section">
-            <!-- Comments Ad Slot -->
+        <aside class="comments-section">
             <div class="ad-slot">
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -62,25 +88,26 @@
             </div>
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://project-kyk2d06i1i.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 LottoGen Pro. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="about.html">Contact Us</a></li>
+            </ul>
         </div>
-    </div>
+    </footer>
 
     <!-- VOC Modal -->
     <div id="voc-modal" class="modal">

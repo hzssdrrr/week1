@@ -17,33 +17,72 @@ body.dark-mode {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--container-bg);
+    box-shadow: 0 2px 10px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Layout */
 .main-wrapper {
     display: flex;
     gap: 2rem;
     max-width: 1200px;
-    width: 100%;
+    width: 90%;
+    margin: 2rem auto;
     align-items: flex-start;
     justify-content: center;
+    flex: 1;
 }
 
 .left-column {
-    flex: 1;
-    max-width: 500px;
+    flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .container {
@@ -51,50 +90,93 @@ body {
     position: relative;
     text-align: center;
     background-color: var(--container-bg);
-    padding: 3rem 2rem 2rem 2rem;
+    padding: 3rem 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px var(--shadow);
-    transition: background-color 0.3s, box-shadow 0.3s;
     box-sizing: border-box;
 }
 
-/* AdSense Styles */
-.ad-slot {
-    width: 100%;
-    min-height: 90px;
-    background-color: var(--container-bg);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px var(--shadow);
-    margin-bottom: 1rem;
+.subtitle {
+    opacity: 0.8;
+    margin-bottom: 2rem;
 }
 
-.ad-slot-inner {
-    margin-top: 2rem;
-    min-height: 100px;
-    border-top: 1px solid var(--shadow);
-    padding-top: 1rem;
-}
-
-.comments-section {
-    flex: 1;
-    max-width: 600px;
+.info-content {
     background-color: var(--container-bg);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px var(--shadow);
-    transition: background-color 0.3s, box-shadow 0.3s;
-    min-height: 400px;
+    line-height: 1.6;
+}
+
+.info-content h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.info-content ul {
+    padding-left: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--container-bg);
+    padding: 2rem 5%;
+    margin-top: 4rem;
+    border-top: 1px solid var(--shadow);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+#voc-open-btn {
+    position: static; /* Remove fixed position in navbar */
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 @media (max-width: 1000px) {
     .main-wrapper {
         flex-direction: column;
-        align-items: center;
+        width: 95%;
     }
-    .container, .comments-section {
+    .left-column, .comments-section {
         width: 100%;
-        max-width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
